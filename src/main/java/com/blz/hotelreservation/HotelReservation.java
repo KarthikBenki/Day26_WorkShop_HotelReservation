@@ -1,12 +1,26 @@
 package com.blz.hotelreservation;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HotelReservation {
-	
-public Hotel addHotel(String hName,double weekDayRate,double weekEndRate ) {
-		Hotel hotel = new Hotel();
-		hotel.setHotelName(hName);
-		hotel.setRateForRegularCustomerWeekDay(weekDayRate);
-		hotel.setRateForRegularCustomerWeekEnd(weekEndRate);
+	List<Hotel> hotelList = new ArrayList<>();
+
+	public List<Hotel> getHotelList() {
+		return hotelList;
+	}
+
+	public void setHotelList(List<Hotel> hotelList) {
+		this.hotelList = hotelList;
+	}
+
+	/*
+	 * @purpose: Ability to add hotel
+	 * 
+	 * @function: adds values using setters method
+	 */
+	public Hotel addHotel(Hotel hotel) {
+		hotelList.add(hotel);
 		return hotel;
 	}
 
@@ -14,5 +28,5 @@ public Hotel addHotel(String hName,double weekDayRate,double weekEndRate ) {
 		System.out.println("Welcome to Hotel Reservation System");
 
 	}
-		
+
 }
